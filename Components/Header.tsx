@@ -103,9 +103,9 @@ export default function Header() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 glow-effect transition-all duration-300"
+          className="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-700 glow-effect transition-all duration-300 flex items-center justify-center"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-5 h-5 text-white"/>
         </button>
       )}
 

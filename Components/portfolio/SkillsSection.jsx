@@ -1,54 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Palette, Monitor, Smartphone, Zap, Target, Layers } from "lucide-react";
-
-const skills = [
-  {
-    icon: Palette,
-    title: "Brand Identity",
-    description: "Creating memorable brand identities that tell your story",
-    color: "from-pink-500 to-rose-500"
-  },
-  {
-    icon: Monitor,
-    title: "Web Design",
-    description: "Responsive websites that engage and convert visitors",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Design",
-    description: "User-friendly mobile apps with intuitive interfaces",
-    color: "from-purple-500 to-indigo-500"
-  },
-  {
-    icon: Zap,
-    title: "UX Strategy",
-    description: "Research-driven design decisions that improve user experience",
-    color: "from-amber-500 to-orange-500"
-  },
-  {
-    icon: Target,
-    title: "Conversion Optimization",
-    description: "Designs that drive results and achieve business goals",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    icon: Layers,
-    title: "Design Systems",
-    description: "Scalable design systems for consistent brand experiences",
-    color: "from-violet-500 to-purple-500"
-  }
-];
-
-const tools = [
-  { name: "Figma", proficiency: 95 },
-  { name: "Adobe Creative Suite", proficiency: 90 },
-  { name: "Sketch", proficiency: 85 },
-  { name: "Webflow", proficiency: 80 },
-  { name: "Framer", proficiency: 75 },
-  { name: "Principle", proficiency: 70 }
-];
+import {skillsDetails, skills, tools} from '@/data/skills';
 
 export default function SkillsSection() {
   return (
@@ -63,14 +14,14 @@ export default function SkillsSection() {
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             Combining creativity with technical expertise to deliver exceptional design solutions
           </p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 max-w-6xl mx-auto">
-          {skills.map((skill, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 max-w-6xl mx-auto">
+          {skillsDetails.map((skill, index) => (
             <motion.div
               key={skill.title}
               initial={{ opacity: 0, y: 30 }}
@@ -86,7 +37,46 @@ export default function SkillsSection() {
             </motion.div>
           ))}
         </div>
-
+        <div className="max-w-6xl mx-auto mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="px-6 py-3 bg-white border-2 border-gray-200 rounded-full text-gray-700 font-medium hover:border-indigo-400 hover:text-indigo-600 transition-all duration-300 cursor-default"
+              >
+                {skill}
+              </span>
+            ))}
+          </motion.div>
+        </div>
+        {/* CTA Section */}
+      <section className="px-6 lg:px-8 mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center bg-linear-to-r from-indigo-600 to-purple-600 rounded-3xl p-6 md:p-6 text-white"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Let's Work Together
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Have a project in mind? I'd love to hear about it.
+          </p>
+          <a href={`mailto:hello@example.com`}>
+            <button className="px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold hover:shadow-xl transition-shadow duration-300">
+              Get In Touch
+            </button>
+          </a>
+        </motion.div>
+      </section>
         {/* Tools & Proficiency */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -112,7 +102,7 @@ export default function SkillsSection() {
                       initial={{ width: 0 }}
                       whileInView={{ width: `${tool.proficiency}%` }}
                       transition={{ duration: 1, delay: index * 0.1 }}
-                      className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+                      className="h-full bg-linear-to-r from-blue-500 to-purple-500 rounded-full"
                     />
                   </div>
                   <span className="text-sm font-medium text-gray-600">{tool.proficiency}%</span>
