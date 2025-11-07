@@ -11,7 +11,7 @@ const achievements = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="about" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left Content */}
@@ -26,41 +26,23 @@ export default function AboutSection() {
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                Hi! I'm a passionate designer with over 3 years of experience creating 
-                digital experiences that merge creativity with functionality. My journey 
-                began with a love for visual storytelling and has evolved into crafting 
-                comprehensive design solutions.
+                I’m Rajesh Chaurasia, a results-driven UI/UX and Product Designer & Developer with strong expertise in user experience design, front-end development, and product strategy.
               </p>
-              
               <p>
-                I specialize in web design, brand identity, and user experience design. 
-                My approach combines strategic thinking with creative execution to deliver 
-                designs that not only look beautiful but also achieve business objectives.
+               With extensive experience at Blis Media and 3Pillar Global, I’ve led cross-functional teams to deliver intuitive, high-performing digital products — from UX research and wireframing to front-end implementation using React, Next.js, JavaScript, and Tailwind CSS.
               </p>
-              
               <p>
-                When I'm not designing, you'll find me exploring the latest design trends, 
-                experimenting with new tools, or collaborating with amazing clients on 
-                exciting projects that push creative boundaries.
+                My approach blends design thinking and technical execution to craft interfaces that are both visually compelling and functionally seamless. I thrive at the intersection of design and development, bridging the gap between user needs and business goals.
+              </p>
+              <p>
+                Key focus areas include UX research, prototyping, accessibility, usability analysis, and product lifecycle management. I also collaborate with stakeholders to define roadmaps, optimize user flows, and ensure delivery of scalable, user-centric solutions.
+              </p>
+              <p>
+                I’m always open to connecting with like-minded professionals and exploring opportunities where thoughtful design meets impactful technology.
               </p>
             </div>
 
-            {/* Achievements Grid */}
-            <div className="grid grid-cols-2 gap-6 mt-12">
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={achievement.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
-                >
-                  <achievement.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-gray-900 mb-1">{achievement.value}</div>
-                  <div className="text-sm text-gray-600">{achievement.label}</div>
-                </motion.div>
-              ))}
-            </div>
+    
           </motion.div>
 
           {/* Right Image */}
@@ -72,23 +54,39 @@ export default function AboutSection() {
           >
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop"
+                src="/images/rc.jpg"
                 alt="Designer Portrait"
-                className="w-full h-[600px] object-cover rounded-3xl shadow-2xl"
+                className="w-1/2 object-cover rounded-full  m-auto"
               />
               
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full opacity-80 blur-sm"
+                className="absolute top-8 left-8 w-32 h-32 bg-linear-to-br from-amber-500 to-orange-500 rounded-full opacity-80 blur-sm"
               ></motion.div>
               
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full opacity-60 blur-sm"
+                className="absolute bottom-8 right-8 w-32 h-32 bg-linear-to-br from-blue-400 to-purple-500 rounded-full opacity-60 blur-sm"
               ></motion.div>
+            </div>
+                    {/* Achievements Grid */}
+            <div className="grid grid-cols-2 gap-4 mt-12">
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={achievement.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <achievement.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-gray-900 mb-1">{achievement.value}</div>
+                  <div className="text-sm text-gray-600">{achievement.label}</div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
