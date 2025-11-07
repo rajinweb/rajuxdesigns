@@ -45,7 +45,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           {/* Floating Icons */}
           <div className="relative mb-8">
@@ -99,12 +99,8 @@ export default function HeroSection() {
               <Sparkles className="w-4 h-4" />
               <span className="">Product Designer & Creative Thinker</span>
             </div>
-          <h1 className="text-6xl md:text-7xl lg:text-7xl font-bold text-[#1F2937] mb-6 leading-tight text-gradient">
-              Crafting Digital 
-            
-              <span className="bg-linear-to-r from-indigo-600 to-purple-600 text-gradient">
-                Experiences
-              </span>
+            <h1 className="text-6xl md:text-7xl lg:text-7xl font-bold text-[#1F2937] mb-6 leading-tight text-gradient">
+              Crafting Digital Product Users Love
             </h1>
 
           <motion.p
@@ -113,7 +109,8 @@ export default function HeroSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-xl md:text-lg text-gray-600 mb-8  mx-auto leading-relaxed"
           >
-            Transforming complex problems into intuitive, beautiful solutions that users love.
+            Transforming complex problems into intuitive, beautiful solutions.
+            <br/><small className="underline">Bridging Design and Technology</small>
           </motion.p>
 
           <motion.div
@@ -148,15 +145,15 @@ export default function HeroSection() {
             className="grid grid-cols-3 gap-8 max-w-md mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-1">50+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-1">10+</div>
               <div className="text-sm text-gray-600">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-1">3+</div>
+              <div className="text-3xl font-bold text-purple-600 mb-1">9+</div>
               <div className="text-sm text-gray-600">Years</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-amber-600 mb-1">25+</div>
+              <div className="text-3xl font-bold text-amber-600 mb-1">12+</div>
               <div className="text-sm text-gray-600">Clients</div>
             </div>
           </motion.div>

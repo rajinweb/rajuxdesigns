@@ -58,24 +58,26 @@ export default function Header() {
             
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8 m-auto border border-purple-100 px-6 py-4 glass-morphism rounded-full">
-              <div className="text-2xl font-bold text-gradient cursor-pointer">
-               RajUXDesigns
+            <div className="hidden md:flex items-center space-x-6 m-auto border border-purple-100 px-6 py-4 glass-morphism rounded-full lg:text-sm">
+              <div className="text-xl font-bold text-gradient cursor-pointer">
+               Raj<span className="rounded-full inline-flex justify-center items-center">UX</span>Designs
               </div>
+              <div className="font-medium ">
               {navigationItems.map((item) => (
                 <button
                   key={item.title}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-blue-600  px-4 py-2  transition-colors font-medium "
+                  className="text-gray-700 hover:text-blue-600  px-4 py-2  transition-colors "
                 >
                   {item.title}
                 </button>
               ))}
-                <button            
-                    className="px-4 py-2 text-white bg-linear-to-t from-purple-600 to-purple-600 hover:to-purple-700 transition-colors font-medium rounded-4xl"
+              </div>
+                <a href="/RC_ux_ui.pdf"          
+                    className="px-4 py-2 text-white bg-linear-to-t from-purple-600 to-blue-600 hover:to-purple-700 transition-colors font-medium rounded-4xl"
                   >
                     Download CV
-                  </button>
+                  </a>
             </div>
 
             {/* Mobile Menu Button */}
