@@ -3,7 +3,7 @@ export const projects =[
         "title": "EcoShop Sustainability Marketplace",
         "tagline": "Making sustainable shopping easy and accessible",
         "category": "Product Design",
-        "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800&h=600&fit=crop",
+        "image": "/portfolio/SecureSign.png",
         "year": "2024",
         "client": "EcoShop",
         "role": "Product Designer",
@@ -17,7 +17,11 @@ export const projects =[
             "UserTesting.com",
             "Amplitude"
         ],
-        "images": [],
+      "images": [
+            "/portfolio/SecureSign.png",
+            "/portfolio/Dashboard.png",
+            "/portfolio/editor.png"
+        ],
         "featured": true,
         "order": 3.0,
         "id": "68f68d877f7ac1e2870b476b",
@@ -31,7 +35,7 @@ export const projects =[
         "title": "StreamFlow Entertainment App",
         "tagline": "Personalized entertainment discovery made simple",
         "category": "Mobile App",
-        "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+        "image": "/portfolio/advertiss.png",
         "year": "2023",
         "client": "StreamFlow Media",
         "role": "Senior UX Designer",
@@ -59,7 +63,7 @@ export const projects =[
         "title": "FinTech Banking App",
         "tagline": "Reimagining mobile banking for the digital generation",
         "category": "Mobile App",
-        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+        "image": "/portfolio/Advertric.png",
         "year": "2024",
         "client": "NextGen Bank",
         "role": "Lead UX Designer",
@@ -91,7 +95,7 @@ export const projects =[
         "title": "LearnSpace Educational Platform",
         "tagline": "Transforming online learning for K-12 students",
         "category": "Product Design",
-        "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop",
+        "image": "/portfolio/monumental.png",
         "year": "2024",
         "client": "LearnSpace Education",
         "role": "Product Designer",
@@ -119,7 +123,7 @@ export const projects =[
         "title": "WorkHub Collaboration Suite",
         "tagline": "Streamlining remote team collaboration",
         "category": "Web Design",
-        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
+        "image": "/portfolio/gocanvas.png",
         "year": "2023",
         "client": "WorkHub Technologies",
         "role": "Lead Designer",
@@ -133,7 +137,18 @@ export const projects =[
             "Notion",
             "Mixpanel"
         ],
-        "images": [],
+        "images": [
+            "/portfolio/gocanvas/gocanvas.png",
+            "/portfolio/gocanvas/gocanvas_app.png",
+            "/portfolio/gocanvas/gocanvas_appStore.png",
+            "/portfolio/gocanvas/gocanvas_dashboard.png",
+            "/portfolio/gocanvas/gocanvas_PDF_Designer.png",
+            "/portfolio/gocanvas/gocanvas_pricing.png",
+            "/portfolio/gocanvas/gocanvas-builder.png",
+            "/portfolio/gocanvas/mobile_screens_set1.png",
+            "/portfolio/gocanvas/mobile_screens_set2.png",
+        
+        ],
         "featured": false,
         "order": 5.0,
         "id": "68f68d877f7ac1e2870b476d",
@@ -147,7 +162,7 @@ export const projects =[
         "title": "HealthTrack Wellness Platform",
         "tagline": "Empowering users to take control of their health journey",
         "category": "Web Design",
-        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+        "image": "/portfolio/ABC.png",
         "year": "2023",
         "client": "HealthTrack Inc.",
         "role": "UX/UI Designer",
@@ -162,7 +177,9 @@ export const projects =[
             "Optimal Workshop"
         ],
         "images": [
-            "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop"
+             "/portfolio/ABC.png",
+            "/portfolio/AbcDrivers.png",
+            "/portfolio/AbcRaces.png"
         ],
         "featured": true,
         "order": 2.0,

@@ -51,25 +51,31 @@ export default function Header() {
 
       {/* Navigation Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'glass-morphism shadow-lg' : 'bg-transparent'
+        scrollY > 50 ? '' : 'bg-transparent'
       }`}>
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-gradient cursor-pointer">
-              RajUXDesigns
-            </div>
+            
             
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8 m-auto border border-purple-100 px-6 py-4 glass-morphism rounded-full">
+              <div className="text-2xl font-bold text-gradient cursor-pointer">
+               RajUXDesigns
+              </div>
               {navigationItems.map((item) => (
                 <button
                   key={item.title}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-700 hover:text-blue-600  px-4 py-2  transition-colors font-medium "
                 >
                   {item.title}
                 </button>
               ))}
+                <button            
+                    className="px-4 py-2 text-white bg-linear-to-t from-purple-600 to-purple-600 hover:to-purple-700 transition-colors font-medium rounded-4xl"
+                  >
+                    Download CV
+                  </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -94,6 +100,11 @@ export default function Header() {
                     {item.title}
                   </button>
                 ))}
+                  <button            
+                    className="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                  >
+                    Download CV
+                  </button>
               </div>
             </div>
           )}

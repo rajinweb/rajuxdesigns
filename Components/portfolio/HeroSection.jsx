@@ -97,11 +97,11 @@ export default function HeroSection() {
 
            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 rounded-full text-indigo-700 text-sm font-medium mb-8">
               <Sparkles className="w-4 h-4" />
-              <span className="">UX Designer & Creative Thinker</span>
+              <span className="">Product Designer & Creative Thinker</span>
             </div>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#1F2937] mb-6 leading-tight text-gradient">
-              Crafting Digital
-              <br />
+          <h1 className="text-6xl md:text-7xl lg:text-7xl font-bold text-[#1F2937] mb-6 leading-tight text-gradient">
+              Crafting Digital 
+            
               <span className="bg-linear-to-r from-indigo-600 to-purple-600 text-gradient">
                 Experiences
               </span>

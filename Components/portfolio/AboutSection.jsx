@@ -26,7 +26,7 @@ export default function AboutSection() {
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                I’m Rajesh Chaurasia, a results-driven UI/UX and Product Designer & Developer with strong expertise in user experience design, front-end development, and product strategy.
+                Hello, I’m Rajesh Chaurasia, a results-driven UI/UX and Product Designer & Developer with strong expertise in user experience design, front-end development, and product strategy.
               </p>
               <p>
                With extensive experience at Blis Media and 3Pillar Global, I’ve led cross-functional teams to deliver intuitive, high-performing digital products — from UX research and wireframing to front-end implementation using React, Next.js, JavaScript, and Tailwind CSS.
