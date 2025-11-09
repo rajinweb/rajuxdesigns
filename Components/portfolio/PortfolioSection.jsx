@@ -9,6 +9,7 @@ import { projects } from "@/data/projects";
 const categories = [
   "All",
   "Web Design",
+  "Digital Ads",
   "Mobile App",
   "Product Design",
   "Branding",
@@ -55,7 +56,7 @@ export default function PortfolioSection() {
               key={category}
               variant={selectedCategory === category ? "default" : "outline"}
               onClick={() => setSelectedCategory(category)}
-              className={`transition-all duration-300 min-w-[50px] max-w-[200px] rounded-md px-6 py-2 ${
+              className={`transition-all duration-300 min-w-[50px] max-w-[200px] rounded-md px-4 py-2 ${
                 selectedCategory === category
                   ? "bg-linear-to-r from-blue-600 to-purple-600 text-white"
                   : "hover:bg-gray-100"

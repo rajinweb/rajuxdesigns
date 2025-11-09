@@ -53,21 +53,19 @@ export default function Header() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrollY > 50 ? '' : 'bg-transparent'
       }`}>
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            
-            
+        <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
+          
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6 m-auto border border-purple-100 px-6 py-4 glass-morphism rounded-full lg:text-sm">
+            <div className="hidden md:flex items-center  m-auto border border-purple-100 p-4 glass-morphism rounded-full lg:text-sm text-xs">
               <div className="text-xl font-bold text-gradient cursor-pointer">
                Raj<span className="rounded-full inline-flex justify-center items-center">UX</span>Designs
               </div>
-              <div className="font-medium ">
+              <div className="font-medium mx-4">
               {navigationItems.map((item) => (
                 <button
                   key={item.title}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-blue-600  px-4 py-2  transition-colors "
+                  className="text-gray-700 hover:text-blue-600 px-4 py-2  transition-colors "
                 >
                   {item.title}
                 </button>
@@ -87,11 +85,11 @@ export default function Header() {
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-          </div>
+         
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 glass-morphism border-t">
+            <div className="md:hidden absolute top-full left-0 right-0 glass-morphism border-t border-blue-800">
               <div className="container mx-auto px-6 py-4">
                 {navigationItems.map((item) => (
                   <button

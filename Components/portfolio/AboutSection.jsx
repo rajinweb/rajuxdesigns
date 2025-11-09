@@ -13,81 +13,73 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-14 items-center max-w-7xl mx-auto">
-         
-
+        <div className="grid lg:grid-cols-2 gap-14 max-w-7xl mx-auto">
+         <div className="relative max-h-[587px] overflow-hidden">
           {/* Right Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative h-full"
+            className=""
           >
-            
-              
-        <Image
-          alt="DesignToCodes"
-          src="/images/rc-transparent.png"
-          loading="lazy"
-          width={425}
-          height={587}
-          className="absolute z-10"
-          quality={100}
-          style="transform: scaleX(-1)"
-        />
-       <Image
-          alt="DesignToCodes"
-          src="/images/Hero_2.png"
-          loading="lazy"
-          width={500}
-          height={500}
-          className=" absolute"
-        />
-          <Image
-          alt="DesignToCodes"
-          src="/images/Hero_3.png"
-          loading="lazy"
-          width={100}
-          height={100}
-          className="absolute right-30 "
-        />
-        <Image
-          alt="DesignToCodes"
-          src="/images/Hero_4.png"
-          loading="lazy"
-          width={100}
-          height={100}
-          className="absolute"
-           title="photoshop"
-        />
-        <Image
-          alt="DesignToCodes"
-          src="/images/Hero_5.png"
-          loading="lazy"
-          width={100}
-          height={100}
-          className=" absolute right-30 bottom-80"
-          title="figma"
-        /> 
- 
- 
-              {/* <img
-                src="/images/rc.jpg"
-                alt="Designer Portrait"
-                className="w-1/2 object-cover rounded-full  m-auto"
-              /> */}
-              
+              <Image
+                alt="Rajesh Chaurasia"
+                src="/images/rc-transparent.png"
+                loading="lazy"
+                width={425}
+                height={587}
+                className="absolute -translate-x-1/2 z-2  left-1/2"
+                quality={100}
+                title="Rajesh Chaurasia"
+              />
+            <Image
+                alt="DesignToCodes"
+                src="/images/Hero_2.png"
+                loading="lazy"
+                width={500}
+                height={500}
+                className=" absolute"
+                title="lines"
+              />
+                <Image
+                alt="DesignToCodes"
+                src="/images/Hero_3.png"
+                loading="lazy"
+                width={100}
+                height={100}
+                className="absolute right-15"
+                title="Adobe Illustrator"
+              />
+              <Image
+                alt="DesignToCodes"
+                src="/images/Hero_4.png"
+                loading="lazy"
+                width={100}
+                height={100}
+                className="absolute"
+                title="photoshop"
+              />
+              <Image
+                alt="DesignToCodes"
+                src="/images/Hero_5.png"
+                loading="lazy"
+                width={100}
+                height={100}
+                className=" absolute right-35 bottom-45 z-2"
+                title="figma"
+              /> 
+               
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-8 left-8 w-32 h-32 bg-linear-to-br from-amber-500 to-orange-500 rounded-full opacity-80 blur-sm"
+                className="absolute top-18 left-18 w-32 h-32 bg-linear-to-br from-amber-500 to-orange-500 rounded-full opacity-80 blur-sm z-1"
               ></motion.div>
               
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-8 right-8 w-32 h-32 bg-linear-to-br from-blue-400 to-purple-500 rounded-full opacity-60 blur-sm"
+                className="absolute bottom-70 right-24 w-24 h-24 bg-linear-to-br from-blue-400 to-purple-500 rounded-full opacity-60 blur-sm z-2"
               ></motion.div>
        
                     {/* Achievements Grid 
@@ -106,7 +98,9 @@ export default function AboutSection() {
                 </motion.div>
               ))}
             </div>*/}
+            
           </motion.div>
+          </div>
            {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
