@@ -12,13 +12,13 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 (999) 914-5932",
-    href: "tel:+919999145932"
+    value: "+91 (638) 631-3937",
+    href: "tel:+916386313937"
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Greater Noida, India",
+    value: "New Delhi, India",
     href: "#"
   }
 ];
