@@ -11,26 +11,17 @@ const categories = [
   "Web Design",
   "Digital Ads",
   "Mobile App",
+  "Web Apps",
   "Product Design",
-  "Branding",
-  "Research",
   "Strategy"
 ];
 
 export default function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredProject, setHoveredProject] = useState(null);
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
-
-  const getGridClass = (project, index) => {
-    if (project.featured) {
-      return "md:col-span-2 md:row-span-2";
-    }
-    return "col-span-1";
-  };
 
   return (
     <section id="portfolio" className="py-20 bg-white">
@@ -75,7 +66,7 @@ export default function PortfolioSection() {
           >
             {filteredProjects.map((project, index) => (
               <motion.div
-                key={project.id}
+                key={`${project.id}-${index}`}
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -106,9 +97,32 @@ export default function PortfolioSection() {
                         {project.title}
                       </h3>
                       <p className="text-gray-600 text-sm line-clamp-2">{project.tagline}</p>
-                      {project.year && (
-                        <p className="text-gray-400 text-xs mt-2">{project.year}</p>
-                      )}
+                      <p className="text-gray-400 text-xs mt-2">
+                        {project.year && project.year} |  {
+                        project.url && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              // open external link in a new tab safely
+                              window.open(project.url, "_blank", "noopener,noreferrer");
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                window.open(project.url, "_blank", "noopener,noreferrer");
+                              }
+                            }}
+                            className="text-indigo-600 underline"
+                            aria-label={`Open ${project.name} in a new tab`}
+                          >
+                            {project.name}
+                          </button>
+                        )
+                        }
+                      </p> 
                     </div>
                   </div>
                 </Link>

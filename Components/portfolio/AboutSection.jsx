@@ -14,13 +14,13 @@ export default function AboutSection() {
     <section id="about" className="py-20 bg-linear-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-14 max-w-7xl mx-auto">
-         <div className="relative max-h-[587px] overflow-hidden">
+         <div className="relative md:max-h-[520px] max-h-[390px]overflow-hidden flex">
           {/* Right Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className=""
+            className="object-cover"
           >
               <Image
                 alt="Rajesh Chaurasia"
@@ -28,36 +28,36 @@ export default function AboutSection() {
                 loading="lazy"
                 width={425}
                 height={587}
-                className="absolute -translate-x-1/2 z-2  left-1/2"
-                quality={100}
+                className="relative -top-8 left-6 m-auto z-2"
+                quality={75}
                 title="Rajesh Chaurasia"
               />
             <Image
-                alt="DesignToCodes"
+                alt=""
                 src="/images/Hero_2.png"
                 loading="lazy"
                 width={500}
                 height={500}
-                className=" absolute"
-                title="lines"
+                className="absolute top-0 z-1"
+                title="Curv Lines"
               />
                 <Image
-                alt="DesignToCodes"
+                alt="Design tool Illustrator"
                 src="/images/Hero_3.png"
                 loading="lazy"
-                width={100}
-                height={100}
-                className="absolute right-15"
+                width={80}
+                height={80}
+                className="absolute bottom-0 z-2"
                 title="Adobe Illustrator"
               />
               <Image
-                alt="DesignToCodes"
+                alt="Design tool Photoshop"
                 src="/images/Hero_4.png"
                 loading="lazy"
-                width={100}
-                height={100}
-                className="absolute"
-                title="photoshop"
+                width={80}
+                height={80}
+                className="absolute right-0 top-0"
+                title="Photoshop"
               />
               <Image
                 alt="DesignToCodes"
@@ -65,21 +65,21 @@ export default function AboutSection() {
                 loading="lazy"
                 width={100}
                 height={100}
-                className=" absolute right-35 bottom-45 z-2"
-                title="figma"
+                className="absolute top-50 right-0  z-2"
+                title="Figma"
               /> 
                
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-18 left-18 w-32 h-32 bg-linear-to-br from-amber-500 to-orange-500 rounded-full opacity-80 blur-sm z-1"
+                className="absolute top-10 left-10 w-32 h-32 bg-linear-to-br from-amber-500 to-orange-500 rounded-full opacity-80 blur-sm z-1"
               ></motion.div>
               
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-70 right-24 w-24 h-24 bg-linear-to-br from-blue-400 to-purple-500 rounded-full opacity-60 blur-sm z-2"
+                className="absolute bottom-5 right-4 w-24 h-24 bg-linear-to-br from-blue-400 to-purple-500 rounded-full opacity-60 blur-sm z-2"
               ></motion.div>
        
                     {/* Achievements Grid 
