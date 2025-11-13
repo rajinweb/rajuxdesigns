@@ -42,7 +42,7 @@ export const projects =[
         "title": "IBOR (Investment Book of Record)",
         "tagline": "Delivering real-time financial clarity through intelligent portfolio data systems",
         "category": "Product Design",
-        "image": "/portfolio/Addepar/Addepar_IBOR.png",
+        "image": "/portfolio/addepar/Addepar_IBOR.png",
         "year": "2024",
         "client": "Addepar Inc.",
         "role": "Product Manager",
@@ -62,12 +62,12 @@ export const projects =[
             "NextJS",
         ],
         "images": [
-            "/portfolio/Addepar/Addepar_Dashboard.png",
-            "/portfolio/Addepar/Addepar_DataViews.png",
-            "/portfolio/Addepar/Addepar_Analysis.png",
-            "/portfolio/Addepar/addepar_projection.png",
-            "/portfolio/Addepar/Addepar_billing.png",
-            "/portfolio/Addepar/Addepar_rebalancing.png"
+            "/portfolio/addepar/Addepar_Dashboard.png",
+            "/portfolio/addepar/Addepar_DataViews.png",
+            "/portfolio/addepar/Addepar_Analysis.png",
+            "/portfolio/addepar/addepar_projection.png",
+            "/portfolio/addepar/Addepar_billing.png",
+            "/portfolio/addepar/Addepar_rebalancing.png"
         ],
         "featured": true,
         "order": 3.0,
