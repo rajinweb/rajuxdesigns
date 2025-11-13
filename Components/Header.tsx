@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ArrowUp } from "lucide-react";
 
 const navigationItems = [
@@ -14,6 +15,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,9 +33,19 @@ export default function Header() {
   };
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (pathname.startsWith('/ProjectDetails')) {
+      router.push('/');
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -57,7 +70,7 @@ export default function Header() {
           
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center  m-auto border border-purple-100 p-4 glass-morphism rounded-full lg:text-sm text-xs">
-              <div className="text-xl font-bold text-gradient cursor-pointer">
+              <div className="text-xl font-bold text-gradient cursor-pointer" onClick={() => scrollToSection('#hero')}>
                Raj<span className="rounded-full inline-flex justify-center items-center">UX</span>Designs
               </div>
               <div className="font-medium mx-4">
@@ -100,11 +113,11 @@ export default function Header() {
                     {item.title}
                   </button>
                 ))}
-                  <button            
+                  <a href="/RC_ux_ui.pdf"            
                     className="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer"
                   >
                     Download CV
-                  </button>
+                  </a>
               </div>
             </div>
           )}
