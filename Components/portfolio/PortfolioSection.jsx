@@ -9,11 +9,10 @@ import { projects } from "@/data/projects";
 const categories = [
   "All",
   "Web Design",
-  "Digital Ads",
+  "Digital Ad",
   "Mobile App",
-  "Web Apps",
-  "Product Design",
-  "Strategy"
+  "Web App",
+  "Product Design"
 ];
 
 export default function PortfolioSection() {

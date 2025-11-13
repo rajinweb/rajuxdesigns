@@ -65,14 +65,14 @@ export default function Header() {
                 <button
                   key={item.title}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 hover:text-blue-600 px-4 py-2  transition-colors "
+                  className="text-gray-700 hover:text-blue-600 px-4 py-2  transition-colors cursor-pointer"
                 >
                   {item.title}
                 </button>
               ))}
               </div>
                 <a href="/RC_ux_ui.pdf"          
-                    className="px-4 py-2 text-white bg-linear-to-t from-purple-600 to-blue-600 hover:to-purple-700 transition-colors font-medium rounded-4xl"
+                    className="px-4 py-2 text-white bg-linear-to-t from-purple-600 to-blue-600 hover:to-purple-700 transition-colors font-medium rounded-4xl cursor-pointer"
                   >
                     Download CV
                   </a>
@@ -95,13 +95,13 @@ export default function Header() {
                   <button
                     key={item.title}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                    className="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer"
                   >
                     {item.title}
                   </button>
                 ))}
                   <button            
-                    className="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                    className="block w-full text-left py-3 text-gray-700 hover:text-blue-600 transition-colors font-medium cursor-pointer"
                   >
                     Download CV
                   </button>

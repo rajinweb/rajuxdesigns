@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+'use client'; 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, ExternalLink } from "lucide-react";
 
@@ -6,8 +7,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@rajuxdesigns.com",
-    href: "mailto:hello@rajuxdesigns.com"
+    value: "rajuxdesigns@gmail.com",
+    href: "mailto:rajuxdesigns@gmail.com",
   },
   {
     icon: Phone,
@@ -19,15 +20,15 @@ const contactInfo = [
     icon: MapPin,
     label: "Location",
     value: "New Delhi, India",
-    href: "#"
+  
   }
 ];
 
 const socialLinks = [
-  { name: "Dribbble", href: "#", color: "bg-pink-500" },
-  { name: "Behance", href: "#", color: "bg-blue-600" },
-  { name: "Instagram", href: "#", color: "bg-purple-500" },
-  { name: "LinkedIn", href: "#", color: "bg-blue-700" },
+  // { name: "Dribbble", href: "#", color: "bg-pink-500" },
+  // { name: "Behance", href: "#", color: "bg-blue-600" },
+  // { name: "Instagram", href: "#", color: "bg-purple-500" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/rajuxdesign/", color: "bg-blue-700" },
 ];
 
 export default function ContactSection() {
@@ -37,8 +38,9 @@ export default function ContactSection() {
     subject: "",
     message: ""
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -49,20 +51,39 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
-    
-    alert("Thank you! Your message has been sent successfully.");
+     if (loading) return; // prevent multiple submissions
+    setLoading(true); // Set loading to true at the start of submission
+    setStatus(null);
+    try {
+      debugger;
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        setStatus({ ok: true, msg: "Message sent. We'll get back to you soon." });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        console.log('Form submitted successfully', data);
+      } else {
+        setStatus({ ok: false, msg: data?.error || `Submission failed (${res.status})` });
+        console.error('Submission failed', res.status, data);
+      }
+    } catch (error) {
+      setStatus({ ok: false, msg: "Network error. Please try again." });
+      console.error('Error submitting form:', error);
+    } finally {
+      setLoading(false);
+    }
+
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+    <section id="contact" className="py-20 bg-linear-to-br from-gray-900 to-blue-900 text-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -93,7 +114,7 @@ export default function ContactSection() {
                   <input
                     name="name"
                     placeholder="Your Name"
-                    value={formData.name}
+                    value={formData.name ?? ""}
                     onChange={handleInputChange}
                     required
                     className="w-full p-4  border border-blue-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -102,7 +123,7 @@ export default function ContactSection() {
                     name="email"
                     type="email"
                     placeholder="Your Email"
-                    value={formData.email}
+                    value={formData.email ?? ""}
                     onChange={handleInputChange}
                     required
                     className="w-full p-4 border border-blue-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -112,7 +133,7 @@ export default function ContactSection() {
                 <input
                   name="subject"
                   placeholder="Subject"
-                  value={formData.subject}
+                  value={formData.subject ?? ""}
                   onChange={handleInputChange}
                   required
                   className="w-full p-4 border border-blue-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -121,19 +142,40 @@ export default function ContactSection() {
                 <textarea
                   name="message"
                   placeholder="Tell me about your project..."
-                  value={formData.message}
+                  value={formData.message ?? ""}
                   onChange={handleInputChange}
                   required
                   rows={6}
                   className="w-full p-4 border border-blue-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 
+                {/* <button
+                      type="submit"
+                      disabled={loading}
+                      aria-disabled={loading}
+                    className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 text-lg transition-all duration-300 rounded-md items-center flex justify-center"
+                    >
+                      {loading && (
+                        <svg
+                          className="animate-spin -ml-1 mr-2 h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                        </svg>
+                      )}
+                      {loading ? "Sending..." : "Send Message"}
+                    </button> */}
+                    
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={loading}
                   className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 text-lg transition-all duration-300 rounded-md items-center flex justify-center"
                 >
-                  {isSubmitting ? (
+                  {loading ? (
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                       Sending...
@@ -145,6 +187,11 @@ export default function ContactSection() {
                     </div>
                   )}
                 </button>
+                 <div aria-live="polite" className="mt-2">
+              {status && (
+                <p className={`mt-2 ${status.ok ? "text-green-400" : "text-red-400"}`}>{status.msg}</p>
+              )}
+            </div>
               </form>
             </motion.div>
 
@@ -192,6 +239,7 @@ export default function ContactSection() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       className={`${social.color} p-4 rounded-md text-center font-medium hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2`}
+                      target="_blank"
                     >
                       {social.name}
                       <ExternalLink className="w-4 h-4" />

@@ -3,12 +3,21 @@ import { projects } from "@/data/projects";
 import { useParams, useRouter } from "next/navigation";
 import { ArrowLeft,User, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 
 export default function ProjectDetails() {
   const navigate = useRouter()
   const { id: projectId } = useParams();
   const project = projects.find(p => p.id === projectId);
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const images = project?.images?.map((image: any) => ({ src: image })) || [];
+  const coverImage = project ? { src: project.image } : null;
+  const allImages = coverImage ? [coverImage, ...images] : images;
 
   if (!project) {
     return (
@@ -98,7 +107,11 @@ export default function ProjectDetails() {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full rounded-2xl shadow-2xl"
+            className="w-full rounded-2xl shadow-2xl cursor-pointer"
+            onClick={() => {
+              setIndex(0);
+              setOpen(true);
+            }}
           />
         </motion.div>
 
@@ -159,12 +172,16 @@ export default function ProjectDetails() {
               className="mb-16"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.images.map((image:any, index:number) => (
+                {project.images.map((image:any, imgIndex:number) => (
                   <img
-                    key={index}
+                    key={imgIndex}
                     src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full rounded-xl shadow-lg"
+                    alt={`${project.title} - Image ${imgIndex + 1}`}
+                    className="w-full rounded-xl shadow-lg cursor-pointer"
+                    onClick={() => {
+                      setIndex(imgIndex + 1);
+                      setOpen(true);
+                    }}
                   />
                 ))}
               </div>
@@ -209,6 +226,12 @@ export default function ProjectDetails() {
             </motion.section>
           )}
         </div>
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          slides={allImages}
+          index={index}
+        />
       </div>
     </div>
   );
