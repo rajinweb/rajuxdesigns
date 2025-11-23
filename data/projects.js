@@ -24,8 +24,9 @@ export const projects =[
         ],
       "images": [
             "/portfolio/SecureSign.png",
-            "/portfolio/Dashboard.png",
-            "/portfolio/editor.png"
+            "/portfolio/esign/secure-esign-full.jpg",
+            "/portfolio/esign/Dashboard.png",
+            "/portfolio/esign/editor.png"
         ],
         "url": "https://secure-esign.vercel.app",
         "featured": true,
