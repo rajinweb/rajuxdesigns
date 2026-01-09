@@ -43,7 +43,7 @@ export default function SkillsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4 text-sm"
+            className="flex flex-wrap justify-center gap-2 text-sm"
           >
             {skills.map((skill) => (
               <span
