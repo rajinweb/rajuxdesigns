@@ -142,7 +142,7 @@ export const projects =[
             "wordpress"
         ],
         "images": [],
-        "url": "https://advertiss-media.vercel.app",
+        "url": "https://salmon-wren-903159.hostingersite.com/",
         "featured": true,
         "featured": false,
         "order": 4.0,
