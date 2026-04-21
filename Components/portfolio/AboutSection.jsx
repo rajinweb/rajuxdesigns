@@ -112,21 +112,15 @@ export default function AboutSection() {
             </h2>
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>
-                Hello, I’m Rajesh Chaurasia, a results-driven UI/UX and Product Designer & Developer with strong expertise in user experience design, front-end development, and product strategy.
-              </p>
-              <p>
-               With extensive experience at Blis Media and 3Pillar Global, I’ve led cross-functional teams to deliver intuitive, high-performing digital products — from UX research and wireframing to front-end implementation using React, Next.js, JavaScript, and Tailwind CSS.
-              </p>
-              <p>
-                My approach blends design thinking and technical execution to craft interfaces that are both visually compelling and functionally seamless. I thrive at the intersection of design and development, bridging the gap between user needs and business goals.
-              </p>
-              <p>
-                Key focus areas include UX research, prototyping, accessibility, usability analysis, and product lifecycle management. I also collaborate with stakeholders to define roadmaps, optimize user flows, and ensure delivery of scalable, user-centric solutions.
-              </p>
-              <p>
-                I’m always open to connecting with like-minded professionals and exploring opportunities where thoughtful design meets impactful technology.
-              </p>
+                 Product-focused Web Architect with 6+ years of experience, specializing in product design and frontend development within the MERN ecosystem. I build scalable, high-performance digital products from concept to production, with a strong emphasis on crafting intuitive, visually engaging user experiences.
+
+              <p>My core strength lies in translating complex business requirements into seamless, user-centric interfaces using React.js and Next.js, along with modern JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS. I bring a design-first approach, combining UX thinking and Figma-level design sensibilities with clean, production-ready frontend code.</p>
+
+              <p>While frontend and product design are my primary focus, I also have solid experience in backend development - enabling me to contribute to end-to-end solutions and collaborate effectively across the full stack.</p>
+
+              <p>I have delivered impactful products across SaaS, Ad-tech, and enterprise platforms, improving performance, ensuring accessibility (WCAG standards), and driving user engagement.</p>
+
+              <p>I work best in agile, cross-functional teams, partnering with product managers, designers, and engineers to maintain design integrity and deliver high-quality products from discovery through deployment.</p>
             </div>
 
     

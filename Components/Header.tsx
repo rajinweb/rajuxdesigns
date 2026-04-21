@@ -84,7 +84,7 @@ export default function Header() {
                 </button>
               ))}
               </div>
-                <a href="/RC_ux_ui.pdf"          
+                <a href="/rajesh_chaurasia_resume_UI_UX_Frontend_Dev.pdf"          
                     className="px-4 py-2 text-white bg-linear-to-t from-purple-600 to-blue-600 hover:to-purple-700 transition-colors font-medium rounded-4xl cursor-pointer"
                   >
                     Download CV

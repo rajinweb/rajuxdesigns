@@ -145,15 +145,15 @@ export default function HeroSection() {
             className="grid grid-cols-3 gap-8 max-w-md mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-1">14+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-1">05+</div>
               <div className="text-sm text-gray-600">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-1">10</div>
+              <div className="text-3xl font-bold text-purple-600 mb-1">06+</div>
               <div className="text-sm text-gray-600">Years</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-amber-600 mb-1">12+</div>
+              <div className="text-3xl font-bold text-amber-600 mb-1">05+</div>
               <div className="text-sm text-gray-600">Clients</div>
             </div>
           </motion.div>
