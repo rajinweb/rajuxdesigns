@@ -112,15 +112,15 @@ export default function AboutSection() {
             </h2>
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                 Product-focused Web Architect with 6+ years of experience, specializing in product design and frontend development within the MERN ecosystem. I build scalable, high-performance digital products from concept to production, with a strong emphasis on crafting intuitive, visually engaging user experiences.
+            I’m a product-focused Web Architect specializing in frontend development and product design within the MERN ecosystem. I build scalable, high-performance digital products from concept to production, with a strong focus on intuitive and visually engaging user experiences.
 
-              <p>My core strength lies in translating complex business requirements into seamless, user-centric interfaces using React.js and Next.js, along with modern JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS. I bring a design-first approach, combining UX thinking and Figma-level design sensibilities with clean, production-ready frontend code.</p>
+              <p>My core strength is translating complex business requirements into seamless, user-centric interfaces using React.js and Next.js, along with modern JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS. I approach development with a design-first mindset—combining UX thinking and Figma-level design sensibilities with clean, production-ready code.</p>
 
-              <p>While frontend and product design are my primary focus, I also have solid experience in backend development - enabling me to contribute to end-to-end solutions and collaborate effectively across the full stack.</p>
+              <p>While frontend and product design are my primary focus, I also bring solid backend experience, allowing me to contribute across the stack and collaborate effectively on end-to-end solutions.</p>
 
-              <p>I have delivered impactful products across SaaS, Ad-tech, and enterprise platforms, improving performance, ensuring accessibility (WCAG standards), and driving user engagement.</p>
+              <p>I’ve delivered impactful products across SaaS, AdTech, and enterprise platforms—improving performance, ensuring accessibility (WCAG standards), and driving user engagement.</p>
 
-              <p>I work best in agile, cross-functional teams, partnering with product managers, designers, and engineers to maintain design integrity and deliver high-quality products from discovery through deployment.</p>
+              <p>I thrive in agile, cross-functional teams, working closely with product managers, designers, and engineers to maintain design integrity and deliver high-quality products from discovery through deployment.</p>
             </div>
 
     

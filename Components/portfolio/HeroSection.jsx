@@ -148,10 +148,10 @@ export default function HeroSection() {
               <div className="text-3xl font-bold text-blue-600 mb-1">05+</div>
               <div className="text-sm text-gray-600">Projects</div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-3xl font-bold text-purple-600 mb-1">06+</div>
               <div className="text-sm text-gray-600">Years</div>
-            </div>
+            </div> */}
             <div className="text-center">
               <div className="text-3xl font-bold text-amber-600 mb-1">05+</div>
               <div className="text-sm text-gray-600">Clients</div>
