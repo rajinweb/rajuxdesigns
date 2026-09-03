@@ -28,7 +28,7 @@ const socialLinks = [
   // { name: "Dribbble", href: "#", color: "bg-pink-500" },
   // { name: "Behance", href: "#", color: "bg-blue-600" },
   // { name: "Instagram", href: "#", color: "bg-purple-500" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/", color: "bg-blue-700" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/rajuxdesign/", color: "bg-blue-700" },
 ];
 
 export default function ContactSection() {
@@ -227,7 +227,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Social Links */}
+              {/* Social Links 
               <div>
                 <h4 className="text-xl font-bold mb-6">Follow Me</h4>
                 <div className="grid grid-cols-2 gap-4">
@@ -246,7 +246,7 @@ export default function ContactSection() {
                     </motion.a>
                   ))}
                 </div>
-              </div>
+              </div>*/}
             </motion.div>
          </div>
          {/* CTA */}
