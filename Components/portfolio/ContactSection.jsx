@@ -28,7 +28,7 @@ const socialLinks = [
   // { name: "Dribbble", href: "#", color: "bg-pink-500" },
   // { name: "Behance", href: "#", color: "bg-blue-600" },
   // { name: "Instagram", href: "#", color: "bg-purple-500" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/rajuxdesign/", color: "bg-blue-700" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/", color: "bg-blue-700" },
 ];
 
 export default function ContactSection() {
