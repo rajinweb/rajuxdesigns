@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 (638) 631-3937",
-    href: "tel:+916386313937"
+    value: "+91 (###) ###-####",
+    href: "tel:+91-999914532"
   },
   {
     icon: MapPin,
